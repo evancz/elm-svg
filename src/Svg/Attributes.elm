@@ -123,7 +123,7 @@ writingMode
 
 -- Transfer function attributes
 
-type
+type'
 tableValues
 slope
 intercept
