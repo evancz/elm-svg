@@ -8,9 +8,12 @@ import Json.Decode as Json
 import Signal
 import VirtualDom
 
+on : String -> Json.Decoder a -> (a -> Signal.Message) -> Attribute
+on = VirtualDom.on
+
 messageOn : String -> Signal.Message -> Attribute
 messageOn name msg =
-    VirtualDom.on name Json.value (always msg)
+    on name Json.value (always msg)
 
 
 -- Animation event attributes
