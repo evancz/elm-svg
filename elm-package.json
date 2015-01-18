@@ -9,12 +9,11 @@
     "exposed-modules": [
         "Svg",
         "Svg.Attributes",
-        "Svg.Events",
-        "Svg.Lazy"
+        "Svg.Events"
     ],
     "dependencies": {
         "evancz/elm-html": "1.0.0 <= v < 2.0.0",
-        "evancz/virtual-dom": "1.0.0 <= v < 2.0.0",
+        "evancz/virtual-dom": "1.2.0 <= v < 2.0.0",
         "elm-lang/core": "1.0.0 <= v < 2.0.0"
     }
 }
