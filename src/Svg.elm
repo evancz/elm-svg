@@ -45,52 +45,50 @@ module Svg where
 
 import Html
 import VirtualDom
-
+import Json.Encode as Json
 
 type alias Svg = VirtualDom.Node
 
 type alias Attribute = VirtualDom.Property
 
+svgNamespace : Attribute
+svgNamespace =
+    VirtualDom.property "namespace" (Json.string "http://www.w3.org/2000/svg")
+
+svgElement : String -> List Attribute -> List Svg -> Svg
+svgElement name attributes = VirtualDom.node name (svgNamespace :: attributes)
 
 svg : List Html.Attribute -> List Svg -> Html.Html
-svg attributes children =
-    VirtualDom.node "svg" attributes children
+svg = svgElement "svg"
 
 foreignObject : List Attribute -> List Html.Html -> Svg
-foreignObject attributes children =
-    VirtualDom.node "foreignObject" attributes children
+foreignObject = svgElement "foreignObject"
 
 
 -- Animation elements
 
 animate : List Attribute -> List Svg -> Svg
-animate attributes children =
-    VirtualDom.node "animate" attributes children
+animate = svgElement "animate"
 
 
 animateColor : List Attribute -> List Svg -> Svg
-animateColor attributes children =
-    VirtualDom.node "animateColor" attributes children
+animateColor = svgElement "animateColor"
 
 
 animateMotion : List Attribute -> List Svg -> Svg
-animateMotion attributes children =
-    VirtualDom.node "animateMotion" attributes children
+animateMotion = svgElement "animateMotion"
 
 
 animateTransform : List Attribute -> List Svg -> Svg
-animateTransform attributes children =
-    VirtualDom.node "animateTransform" attributes children
+animateTransform = svgElement "animateTransform"
 
 
 mpath : List Attribute -> List Svg -> Svg
-mpath attributes children =
-    VirtualDom.node "mpath" attributes children
+mpath = svgElement "mpath"
 
 
 set : List Attribute -> List Svg -> Svg
-set attributes children =
-    VirtualDom.node "set" attributes children
+set = svgElement "set"
 
 
 -- Container elements
@@ -98,235 +96,191 @@ set attributes children =
 {-| The SVG Anchor Element defines a hyperlink.
 -}
 a : List Attribute -> List Svg -> Svg
-a attributes children =
-    VirtualDom.node "a" attributes children
+a = svgElement "a"
 
 
 defs : List Attribute -> List Svg -> Svg
-defs attributes children =
-    VirtualDom.node "defs" attributes children
+defs = svgElement "defs"
 
 
 g : List Attribute -> List Svg -> Svg
-g attributes children =
-    VirtualDom.node "g" attributes children
+g = svgElement "g"
 
 
 marker : List Attribute -> List Svg -> Svg
-marker attributes children =
-    VirtualDom.node "marker" attributes children
+marker = svgElement "marker"
 
 
 mask : List Attribute -> List Svg -> Svg
-mask attributes children =
-    VirtualDom.node "mask" attributes children
+mask = svgElement "mask"
 
 
 missingGlyph : List Attribute -> List Svg -> Svg
-missingGlyph attributes children =
-    VirtualDom.node "missingGlyph" attributes children
+missingGlyph = svgElement "missingGlyph"
 
 
 pattern : List Attribute -> List Svg -> Svg
-pattern attributes children =
-    VirtualDom.node "pattern" attributes children
+pattern = svgElement "pattern"
 
 
 switch : List Attribute -> List Svg -> Svg
-switch attributes children =
-    VirtualDom.node "switch" attributes children
+switch = svgElement "switch"
 
 
 symbol : List Attribute -> List Svg -> Svg
-symbol attributes children =
-    VirtualDom.node "symbol" attributes children
+symbol = svgElement "symbol"
 
 
 
 -- Descriptive elements
 
 desc : List Attribute -> List Svg -> Svg
-desc attributes children =
-    VirtualDom.node "desc" attributes children
+desc = svgElement "desc"
 
 
 metadata : List Attribute -> List Svg -> Svg
-metadata attributes children =
-    VirtualDom.node "metadata" attributes children
+metadata = svgElement "metadata"
 
 
 title : List Attribute -> List Svg -> Svg
-title attributes children =
-    VirtualDom.node "title" attributes children
+title = svgElement "title"
 
 
 
 -- Filter primitive elements
 
 feBlend : List Attribute -> List Svg -> Svg
-feBlend attributes children =
-    VirtualDom.node "feBlend" attributes children
+feBlend = svgElement "feBlend"
 
 
 feColorMatrix : List Attribute -> List Svg -> Svg
-feColorMatrix attributes children =
-    VirtualDom.node "feColorMatrix" attributes children
+feColorMatrix = svgElement "feColorMatrix"
 
 
 feComponentTransfer : List Attribute -> List Svg -> Svg
-feComponentTransfer attributes children =
-    VirtualDom.node "feComponentTransfer" attributes children
+feComponentTransfer = svgElement "feComponentTransfer"
 
 
 feComposite : List Attribute -> List Svg -> Svg
-feComposite attributes children =
-    VirtualDom.node "feComposite" attributes children
+feComposite = svgElement "feComposite"
 
 
 feConvolveMatrix : List Attribute -> List Svg -> Svg
-feConvolveMatrix attributes children =
-    VirtualDom.node "feConvolveMatrix" attributes children
+feConvolveMatrix = svgElement "feConvolveMatrix"
 
 
 feDiffuseLighting : List Attribute -> List Svg -> Svg
-feDiffuseLighting attributes children =
-    VirtualDom.node "feDiffuseLighting" attributes children
+feDiffuseLighting = svgElement "feDiffuseLighting"
 
 
 feDisplacementMap : List Attribute -> List Svg -> Svg
-feDisplacementMap attributes children =
-    VirtualDom.node "feDisplacementMap" attributes children
+feDisplacementMap = svgElement "feDisplacementMap"
 
 
 feFlood : List Attribute -> List Svg -> Svg
-feFlood attributes children =
-    VirtualDom.node "feFlood" attributes children
+feFlood = svgElement "feFlood"
 
 
 feFuncA : List Attribute -> List Svg -> Svg
-feFuncA attributes children =
-    VirtualDom.node "feFuncA" attributes children
+feFuncA = svgElement "feFuncA"
 
 
 feFuncB : List Attribute -> List Svg -> Svg
-feFuncB attributes children =
-    VirtualDom.node "feFuncB" attributes children
+feFuncB = svgElement "feFuncB"
 
 
 feFuncG : List Attribute -> List Svg -> Svg
-feFuncG attributes children =
-    VirtualDom.node "feFuncG" attributes children
+feFuncG = svgElement "feFuncG"
 
 
 feFuncR : List Attribute -> List Svg -> Svg
-feFuncR attributes children =
-    VirtualDom.node "feFuncR" attributes children
+feFuncR = svgElement "feFuncR"
 
 
 feGaussianBlur : List Attribute -> List Svg -> Svg
-feGaussianBlur attributes children =
-    VirtualDom.node "feGaussianBlur" attributes children
+feGaussianBlur = svgElement "feGaussianBlur"
 
 
 feImage : List Attribute -> List Svg -> Svg
-feImage attributes children =
-    VirtualDom.node "feImage" attributes children
+feImage = svgElement "feImage"
 
 
 feMerge : List Attribute -> List Svg -> Svg
-feMerge attributes children =
-    VirtualDom.node "feMerge" attributes children
+feMerge = svgElement "feMerge"
 
 
 feMergeNode : List Attribute -> List Svg -> Svg
-feMergeNode attributes children =
-    VirtualDom.node "feMergeNode" attributes children
+feMergeNode = svgElement "feMergeNode"
 
 
 feMorphology : List Attribute -> List Svg -> Svg
-feMorphology attributes children =
-    VirtualDom.node "feMorphology" attributes children
+feMorphology = svgElement "feMorphology"
 
 
 feOffset : List Attribute -> List Svg -> Svg
-feOffset attributes children =
-    VirtualDom.node "feOffset" attributes children
+feOffset = svgElement "feOffset"
 
 
 feSpecularLighting : List Attribute -> List Svg -> Svg
-feSpecularLighting attributes children =
-    VirtualDom.node "feSpecularLighting" attributes children
+feSpecularLighting = svgElement "feSpecularLighting"
 
 
 feTile : List Attribute -> List Svg -> Svg
-feTile attributes children =
-    VirtualDom.node "feTile" attributes children
+feTile = svgElement "feTile"
 
 
 feTurbulence : List Attribute -> List Svg -> Svg
-feTurbulence attributes children =
-    VirtualDom.node "feTurbulence" attributes children
+feTurbulence = svgElement "feTurbulence"
 
 
 
 -- Font elements
 
 font : List Attribute -> List Svg -> Svg
-font attributes children =
-    VirtualDom.node "font" attributes children
+font = svgElement "font"
 
 
 fontFace : List Attribute -> List Svg -> Svg
-fontFace attributes children =
-    VirtualDom.node "fontFace" attributes children
+fontFace = svgElement "fontFace"
 
 
 fontFaceFormat : List Attribute -> List Svg -> Svg
-fontFaceFormat attributes children =
-    VirtualDom.node "fontFaceFormat" attributes children
+fontFaceFormat = svgElement "fontFaceFormat"
 
 
 fontFaceName : List Attribute -> List Svg -> Svg
-fontFaceName attributes children =
-    VirtualDom.node "fontFaceName" attributes children
+fontFaceName = svgElement "fontFaceName"
 
 
 fontFaceSrc : List Attribute -> List Svg -> Svg
-fontFaceSrc attributes children =
-    VirtualDom.node "fontFaceSrc" attributes children
+fontFaceSrc = svgElement "fontFaceSrc"
 
 
 fontFaceUri : List Attribute -> List Svg -> Svg
-fontFaceUri attributes children =
-    VirtualDom.node "fontFaceUri" attributes children
+fontFaceUri = svgElement "fontFaceUri"
 
 
 hkern : List Attribute -> List Svg -> Svg
-hkern attributes children =
-    VirtualDom.node "hkern" attributes children
+hkern = svgElement "hkern"
 
 
 vkern : List Attribute -> List Svg -> Svg
-vkern attributes children =
-    VirtualDom.node "vkern" attributes children
+vkern = svgElement "vkern"
 
 
 
 -- Gradient elements
 
 linearGradient : List Attribute -> List Svg -> Svg
-linearGradient attributes children =
-    VirtualDom.node "linearGradient" attributes children
+linearGradient = svgElement "linearGradient"
 
 
 radialGradient : List Attribute -> List Svg -> Svg
-radialGradient attributes children =
-    VirtualDom.node "radialGradient" attributes children
+radialGradient = svgElement "radialGradient"
 
 
 stop : List Attribute -> List Svg -> Svg
-stop attributes children =
-    VirtualDom.node "stop" attributes children
+stop = svgElement "stop"
 
 
 
@@ -338,33 +292,27 @@ a center point and a radius.
     circle [ cx "60", cy "60", r "50" ] []
 -}
 circle : List Attribute -> List Svg -> Svg
-circle attributes children =
-    VirtualDom.node "circle" attributes children
+circle = svgElement "circle"
 
 
 ellipse : List Attribute -> List Svg -> Svg
-ellipse attributes children =
-    VirtualDom.node "ellipse" attributes children
+ellipse = svgElement "ellipse"
 
 
 image : List Attribute -> List Svg -> Svg
-image attributes children =
-    VirtualDom.node "image" attributes children
+image = svgElement "image"
 
 
 line : List Attribute -> List Svg -> Svg
-line attributes children =
-    VirtualDom.node "line" attributes children
+line = svgElement "line"
 
 
 path : List Attribute -> List Svg -> Svg
-path attributes children =
-    VirtualDom.node "path" attributes children
+path = svgElement "path"
 
 
 polygon : List Attribute -> List Svg -> Svg
-polygon attributes children =
-    VirtualDom.node "polygon" attributes children
+polygon = svgElement "polygon"
 
 
 {-| The polyline element is an SVG basic shape, used to create a series of
@@ -374,119 +322,97 @@ create open shapes.
     polyline [ fill "none", stroke "black", points "20,100 40,60 70,80 100,20" ] []
 -}
 polyline : List Attribute -> List Svg -> Svg
-polyline attributes children =
-    VirtualDom.node "polyline" attributes children
+polyline = svgElement "polyline"
 
 
 rect : List Attribute -> List Svg -> Svg
-rect attributes children =
-    VirtualDom.node "rect" attributes children
+rect = svgElement "rect"
 
 
 use : List Attribute -> List Svg -> Svg
-use attributes children =
-    VirtualDom.node "use" attributes children
+use = svgElement "use"
 
 
 
 -- Light source elements
 
 feDistantLight : List Attribute -> List Svg -> Svg
-feDistantLight attributes children =
-    VirtualDom.node "feDistantLight" attributes children
+feDistantLight = svgElement "feDistantLight"
 
 
 fePointLight : List Attribute -> List Svg -> Svg
-fePointLight attributes children =
-    VirtualDom.node "fePointLight" attributes children
+fePointLight = svgElement "fePointLight"
 
 
 feSpotLight : List Attribute -> List Svg -> Svg
-feSpotLight attributes children =
-    VirtualDom.node "feSpotLight" attributes children
+feSpotLight = svgElement "feSpotLight"
 
 
 -- Text content elements
 
 altGlyph : List Attribute -> List Svg -> Svg
-altGlyph attributes children =
-    VirtualDom.node "altGlyph" attributes children
+altGlyph = svgElement "altGlyph"
 
 
 altGlyphDef : List Attribute -> List Svg -> Svg
-altGlyphDef attributes children =
-    VirtualDom.node "altGlyphDef" attributes children
+altGlyphDef = svgElement "altGlyphDef"
 
 
 altGlyphItem : List Attribute -> List Svg -> Svg
-altGlyphItem attributes children =
-    VirtualDom.node "altGlyphItem" attributes children
+altGlyphItem = svgElement "altGlyphItem"
 
 
 glyph : List Attribute -> List Svg -> Svg
-glyph attributes children =
-    VirtualDom.node "glyph" attributes children
+glyph = svgElement "glyph"
 
 
 glyphRef : List Attribute -> List Svg -> Svg
-glyphRef attributes children =
-    VirtualDom.node "glyphRef" attributes children
+glyphRef = svgElement "glyphRef"
 
 
 textPath : List Attribute -> List Svg -> Svg
-textPath attributes children =
-    VirtualDom.node "textPath" attributes children
+textPath = svgElement "textPath"
 
 
 text : List Attribute -> List Svg -> Svg
-text attributes children =
-    VirtualDom.node "text" attributes children
+text = svgElement "text"
 
 
 tref : List Attribute -> List Svg -> Svg
-tref attributes children =
-    VirtualDom.node "tref" attributes children
+tref = svgElement "tref"
 
 
 tspan : List Attribute -> List Svg -> Svg
-tspan attributes children =
-    VirtualDom.node "tspan" attributes children
+tspan = svgElement "tspan"
 
 
 -- Uncategorized elements
 
 clipPath : List Attribute -> List Svg -> Svg
-clipPath attributes children =
-    VirtualDom.node "clipPath" attributes children
+clipPath = svgElement "clipPath"
 
 
 colorProfile : List Attribute -> List Svg -> Svg
-colorProfile attributes children =
-    VirtualDom.node "colorProfile" attributes children
+colorProfile = svgElement "colorProfile"
 
 
 cursor : List Attribute -> List Svg -> Svg
-cursor attributes children =
-    VirtualDom.node "cursor" attributes children
+cursor = svgElement "cursor"
 
 
 filter : List Attribute -> List Svg -> Svg
-filter attributes children =
-    VirtualDom.node "filter" attributes children
+filter = svgElement "filter"
 
 
 script : List Attribute -> List Svg -> Svg
-script attributes children =
-    VirtualDom.node "script" attributes children
+script = svgElement "script"
 
 
 style : List Attribute -> List Svg -> Svg
-style attributes children =
-    VirtualDom.node "style" attributes children
+style = svgElement "style"
 
 
 view : List Attribute -> List Svg -> Svg
-view attributes children =
-    VirtualDom.node "view" attributes children
+view = svgElement "view"
 
 
