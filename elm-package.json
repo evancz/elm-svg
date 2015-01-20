@@ -9,7 +9,8 @@
     "exposed-modules": [
         "Svg",
         "Svg.Attributes",
-        "Svg.Events"
+        "Svg.Events",
+        "Svg.Lazy"
     ],
     "dependencies": {
         "evancz/elm-html": "1.0.0 <= v < 2.0.0",
