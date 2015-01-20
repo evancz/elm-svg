@@ -10,820 +10,1364 @@ import VirtualDom (attribute)
 -- Regular attributes
 
 accentHeight : String -> Attribute
-accentHeight = attribute "accent-height"
+accentHeight value =
+    attribute "accent-height" value
+
 
 accelerate : String -> Attribute
-accelerate = attribute "accelerate"
+accelerate value =
+    attribute "accelerate" value
+
 
 accumulate : String -> Attribute
-accumulate = attribute "accumulate"
+accumulate value =
+    attribute "accumulate" value
+
 
 additive : String -> Attribute
-additive = attribute "additive"
+additive value =
+    attribute "additive" value
+
 
 alphabetic : String -> Attribute
-alphabetic = attribute "alphabetic"
+alphabetic value =
+    attribute "alphabetic" value
+
 
 allowReorder : String -> Attribute
-allowReorder = attribute "allowReorder"
+allowReorder value =
+    attribute "allowReorder" value
+
 
 amplitude : String -> Attribute
-amplitude = attribute "amplitude"
+amplitude value =
+    attribute "amplitude" value
+
 
 arabicForm : String -> Attribute
-arabicForm = attribute "arabic-form"
+arabicForm value =
+    attribute "arabic-form" value
+
 
 ascent : String -> Attribute
-ascent = attribute "ascent"
+ascent value =
+    attribute "ascent" value
+
 
 attributeName : String -> Attribute
-attributeName = attribute "attributeName"
+attributeName value =
+    attribute "attributeName" value
+
 
 attributeType : String -> Attribute
-attributeType = attribute "attributeType"
+attributeType value =
+    attribute "attributeType" value
+
 
 autoReverse : String -> Attribute
-autoReverse = attribute "autoReverse"
+autoReverse value =
+    attribute "autoReverse" value
+
 
 azimuth : String -> Attribute
-azimuth = attribute "azimuth"
+azimuth value =
+    attribute "azimuth" value
+
 
 baseFrequency : String -> Attribute
-baseFrequency = attribute "baseFrequency"
+baseFrequency value =
+    attribute "baseFrequency" value
+
 
 baseProfile : String -> Attribute
-baseProfile = attribute "baseProfile"
+baseProfile value =
+    attribute "baseProfile" value
+
 
 bbox : String -> Attribute
-bbox = attribute "bbox"
+bbox value =
+    attribute "bbox" value
+
 
 begin : String -> Attribute
-begin = attribute "begin"
+begin value =
+    attribute "begin" value
+
 
 bias : String -> Attribute
-bias = attribute "bias"
+bias value =
+    attribute "bias" value
+
 
 by : String -> Attribute
-by = attribute "by"
+by value =
+    attribute "by" value
+
 
 calcMode : String -> Attribute
-calcMode = attribute "calcMode"
+calcMode value =
+    attribute "calcMode" value
+
 
 capHeight : String -> Attribute
-capHeight = attribute "cap-height"
+capHeight value =
+    attribute "cap-height" value
+
 
 class : String -> Attribute
-class = attribute "class"
+class value =
+    attribute "class" value
+
 
 clipPathUnits : String -> Attribute
-clipPathUnits = attribute "clipPathUnits"
+clipPathUnits value =
+    attribute "clipPathUnits" value
+
 
 contentScriptType : String -> Attribute
-contentScriptType = attribute "contentScriptType"
+contentScriptType value =
+    attribute "contentScriptType" value
+
 
 contentStyleType : String -> Attribute
-contentStyleType = attribute "contentStyleType"
+contentStyleType value =
+    attribute "contentStyleType" value
+
 
 cx : String -> Attribute
-cx = attribute "cx"
+cx value =
+    attribute "cx" value
+
 
 cy : String -> Attribute
-cy = attribute "cy"
+cy value =
+    attribute "cy" value
+
 
 d : String -> Attribute
-d = attribute "d"
+d value =
+    attribute "d" value
+
 
 decelerate : String -> Attribute
-decelerate = attribute "decelerate"
+decelerate value =
+    attribute "decelerate" value
+
 
 descent : String -> Attribute
-descent = attribute "descent"
+descent value =
+    attribute "descent" value
+
 
 diffuseConstant : String -> Attribute
-diffuseConstant = attribute "diffuseConstant"
+diffuseConstant value =
+    attribute "diffuseConstant" value
+
 
 divisor : String -> Attribute
-divisor = attribute "divisor"
+divisor value =
+    attribute "divisor" value
+
 
 dur : String -> Attribute
-dur = attribute "dur"
+dur value =
+    attribute "dur" value
+
 
 dx : String -> Attribute
-dx = attribute "dx"
+dx value =
+    attribute "dx" value
+
 
 dy : String -> Attribute
-dy = attribute "dy"
+dy value =
+    attribute "dy" value
+
 
 edgeMode : String -> Attribute
-edgeMode = attribute "edgeMode"
+edgeMode value =
+    attribute "edgeMode" value
+
 
 elevation : String -> Attribute
-elevation = attribute "elevation"
+elevation value =
+    attribute "elevation" value
+
 
 end : String -> Attribute
-end = attribute "end"
+end value =
+    attribute "end" value
+
 
 exponent : String -> Attribute
-exponent = attribute "exponent"
+exponent value =
+    attribute "exponent" value
+
 
 externalResourcesRequired : String -> Attribute
-externalResourcesRequired = attribute "externalResourcesRequired"
+externalResourcesRequired value =
+    attribute "externalResourcesRequired" value
+
 
 filterRes : String -> Attribute
-filterRes = attribute "filterRes"
+filterRes value =
+    attribute "filterRes" value
+
 
 filterUnits : String -> Attribute
-filterUnits = attribute "filterUnits"
+filterUnits value =
+    attribute "filterUnits" value
+
 
 format : String -> Attribute
-format = attribute "format"
+format value =
+    attribute "format" value
+
 
 from : String -> Attribute
-from = attribute "from"
+from value =
+    attribute "from" value
+
 
 fx : String -> Attribute
-fx = attribute "fx"
+fx value =
+    attribute "fx" value
+
 
 fy : String -> Attribute
-fy = attribute "fy"
+fy value =
+    attribute "fy" value
+
 
 g1 : String -> Attribute
-g1 = attribute "g1"
+g1 value =
+    attribute "g1" value
+
 
 g2 : String -> Attribute
-g2 = attribute "g2"
+g2 value =
+    attribute "g2" value
+
 
 glyphName : String -> Attribute
-glyphName = attribute "glyph-name"
+glyphName value =
+    attribute "glyph-name" value
+
 
 glyphRef : String -> Attribute
-glyphRef = attribute "glyphRef"
+glyphRef value =
+    attribute "glyphRef" value
+
 
 gradientTransform : String -> Attribute
-gradientTransform = attribute "gradientTransform"
+gradientTransform value =
+    attribute "gradientTransform" value
+
 
 gradientUnits : String -> Attribute
-gradientUnits = attribute "gradientUnits"
+gradientUnits value =
+    attribute "gradientUnits" value
+
 
 hanging : String -> Attribute
-hanging = attribute "hanging"
+hanging value =
+    attribute "hanging" value
+
 
 height : String -> Attribute
-height = attribute "height"
+height value =
+    attribute "height" value
+
 
 horizAdvX : String -> Attribute
-horizAdvX = attribute "horiz-adv-x"
+horizAdvX value =
+    attribute "horiz-adv-x" value
+
 
 horizOriginX : String -> Attribute
-horizOriginX = attribute "horiz-origin-x"
+horizOriginX value =
+    attribute "horiz-origin-x" value
+
 
 horizOriginY : String -> Attribute
-horizOriginY = attribute "horiz-origin-y"
+horizOriginY value =
+    attribute "horiz-origin-y" value
+
 
 id : String -> Attribute
-id = attribute "id"
+id value =
+    attribute "id" value
+
 
 ideographic : String -> Attribute
-ideographic = attribute "ideographic"
+ideographic value =
+    attribute "ideographic" value
+
 
 in' : String -> Attribute
-in' = attribute "in"
+in' value =
+    attribute "in" value
+
 
 in2 : String -> Attribute
-in2 = attribute "in2"
+in2 value =
+    attribute "in2" value
+
 
 intercept : String -> Attribute
-intercept = attribute "intercept"
+intercept value =
+    attribute "intercept" value
+
 
 k : String -> Attribute
-k = attribute "k"
+k value =
+    attribute "k" value
+
 
 k1 : String -> Attribute
-k1 = attribute "k1"
+k1 value =
+    attribute "k1" value
+
 
 k2 : String -> Attribute
-k2 = attribute "k2"
+k2 value =
+    attribute "k2" value
+
 
 k3 : String -> Attribute
-k3 = attribute "k3"
+k3 value =
+    attribute "k3" value
+
 
 k4 : String -> Attribute
-k4 = attribute "k4"
+k4 value =
+    attribute "k4" value
+
 
 kernelMatrix : String -> Attribute
-kernelMatrix = attribute "kernelMatrix"
+kernelMatrix value =
+    attribute "kernelMatrix" value
+
 
 kernelUnitLength : String -> Attribute
-kernelUnitLength = attribute "kernelUnitLength"
+kernelUnitLength value =
+    attribute "kernelUnitLength" value
+
 
 keyPoints : String -> Attribute
-keyPoints = attribute "keyPoints"
+keyPoints value =
+    attribute "keyPoints" value
+
 
 keySplines : String -> Attribute
-keySplines = attribute "keySplines"
+keySplines value =
+    attribute "keySplines" value
+
 
 keyTimes : String -> Attribute
-keyTimes = attribute "keyTimes"
+keyTimes value =
+    attribute "keyTimes" value
+
 
 lang : String -> Attribute
-lang = attribute "lang"
+lang value =
+    attribute "lang" value
+
 
 lengthAdjust : String -> Attribute
-lengthAdjust = attribute "lengthAdjust"
+lengthAdjust value =
+    attribute "lengthAdjust" value
+
 
 limitingConeAngle : String -> Attribute
-limitingConeAngle = attribute "limitingConeAngle"
+limitingConeAngle value =
+    attribute "limitingConeAngle" value
+
 
 local : String -> Attribute
-local = attribute "local"
+local value =
+    attribute "local" value
+
 
 markerHeight : String -> Attribute
-markerHeight = attribute "markerHeight"
+markerHeight value =
+    attribute "markerHeight" value
+
 
 markerUnits : String -> Attribute
-markerUnits = attribute "markerUnits"
+markerUnits value =
+    attribute "markerUnits" value
+
 
 markerWidth : String -> Attribute
-markerWidth = attribute "markerWidth"
+markerWidth value =
+    attribute "markerWidth" value
+
 
 maskContentUnits : String -> Attribute
-maskContentUnits = attribute "maskContentUnits"
+maskContentUnits value =
+    attribute "maskContentUnits" value
+
 
 maskUnits : String -> Attribute
-maskUnits = attribute "maskUnits"
+maskUnits value =
+    attribute "maskUnits" value
+
 
 mathematical : String -> Attribute
-mathematical = attribute "mathematical"
+mathematical value =
+    attribute "mathematical" value
+
 
 max : String -> Attribute
-max = attribute "max"
+max value =
+    attribute "max" value
+
 
 media : String -> Attribute
-media = attribute "media"
+media value =
+    attribute "media" value
+
 
 method : String -> Attribute
-method = attribute "method"
+method value =
+    attribute "method" value
+
 
 min : String -> Attribute
-min = attribute "min"
+min value =
+    attribute "min" value
+
 
 mode : String -> Attribute
-mode = attribute "mode"
+mode value =
+    attribute "mode" value
+
 
 name : String -> Attribute
-name = attribute "name"
+name value =
+    attribute "name" value
+
 
 numOctaves : String -> Attribute
-numOctaves = attribute "numOctaves"
+numOctaves value =
+    attribute "numOctaves" value
+
 
 offset : String -> Attribute
-offset = attribute "offset"
+offset value =
+    attribute "offset" value
+
 
 onabort : String -> Attribute
-onabort = attribute "onabort"
+onabort value =
+    attribute "onabort" value
+
 
 onactivate : String -> Attribute
-onactivate = attribute "onactivate"
+onactivate value =
+    attribute "onactivate" value
+
 
 onbegin : String -> Attribute
-onbegin = attribute "onbegin"
+onbegin value =
+    attribute "onbegin" value
+
 
 onclick : String -> Attribute
-onclick = attribute "onclick"
+onclick value =
+    attribute "onclick" value
+
 
 onend : String -> Attribute
-onend = attribute "onend"
+onend value =
+    attribute "onend" value
+
 
 onerror : String -> Attribute
-onerror = attribute "onerror"
+onerror value =
+    attribute "onerror" value
+
 
 onfocusin : String -> Attribute
-onfocusin = attribute "onfocusin"
+onfocusin value =
+    attribute "onfocusin" value
+
 
 onfocusout : String -> Attribute
-onfocusout = attribute "onfocusout"
+onfocusout value =
+    attribute "onfocusout" value
+
 
 onload : String -> Attribute
-onload = attribute "onload"
+onload value =
+    attribute "onload" value
+
 
 onmousedown : String -> Attribute
-onmousedown = attribute "onmousedown"
+onmousedown value =
+    attribute "onmousedown" value
+
 
 onmousemove : String -> Attribute
-onmousemove = attribute "onmousemove"
+onmousemove value =
+    attribute "onmousemove" value
+
 
 onmouseout : String -> Attribute
-onmouseout = attribute "onmouseout"
+onmouseout value =
+    attribute "onmouseout" value
+
 
 onmouseover : String -> Attribute
-onmouseover = attribute "onmouseover"
+onmouseover value =
+    attribute "onmouseover" value
+
 
 onmouseup : String -> Attribute
-onmouseup = attribute "onmouseup"
+onmouseup value =
+    attribute "onmouseup" value
+
 
 onrepeat : String -> Attribute
-onrepeat = attribute "onrepeat"
+onrepeat value =
+    attribute "onrepeat" value
+
 
 onresize : String -> Attribute
-onresize = attribute "onresize"
+onresize value =
+    attribute "onresize" value
+
 
 onscroll : String -> Attribute
-onscroll = attribute "onscroll"
+onscroll value =
+    attribute "onscroll" value
+
 
 onunload : String -> Attribute
-onunload = attribute "onunload"
+onunload value =
+    attribute "onunload" value
+
 
 onzoom : String -> Attribute
-onzoom = attribute "onzoom"
+onzoom value =
+    attribute "onzoom" value
+
 
 operator : String -> Attribute
-operator = attribute "operator"
+operator value =
+    attribute "operator" value
+
 
 order : String -> Attribute
-order = attribute "order"
+order value =
+    attribute "order" value
+
 
 orient : String -> Attribute
-orient = attribute "orient"
+orient value =
+    attribute "orient" value
+
 
 orientation : String -> Attribute
-orientation = attribute "orientation"
+orientation value =
+    attribute "orientation" value
+
 
 origin : String -> Attribute
-origin = attribute "origin"
+origin value =
+    attribute "origin" value
+
 
 overlinePosition : String -> Attribute
-overlinePosition = attribute "overline-position"
+overlinePosition value =
+    attribute "overline-position" value
+
 
 overlineThickness : String -> Attribute
-overlineThickness = attribute "overline-thickness"
+overlineThickness value =
+    attribute "overline-thickness" value
+
 
 panose1 : String -> Attribute
-panose1 = attribute "panose-1"
+panose1 value =
+    attribute "panose-1" value
+
 
 path : String -> Attribute
-path = attribute "path"
+path value =
+    attribute "path" value
+
 
 pathLength : String -> Attribute
-pathLength = attribute "pathLength"
+pathLength value =
+    attribute "pathLength" value
+
 
 patternContentUnits : String -> Attribute
-patternContentUnits = attribute "patternContentUnits"
+patternContentUnits value =
+    attribute "patternContentUnits" value
+
 
 patternTransform : String -> Attribute
-patternTransform = attribute "patternTransform"
+patternTransform value =
+    attribute "patternTransform" value
+
 
 patternUnits : String -> Attribute
-patternUnits = attribute "patternUnits"
+patternUnits value =
+    attribute "patternUnits" value
+
 
 pointOrder : String -> Attribute
-pointOrder = attribute "point-order"
+pointOrder value =
+    attribute "point-order" value
+
 
 points : String -> Attribute
-points = attribute "points"
+points value =
+    attribute "points" value
+
 
 pointsAtX : String -> Attribute
-pointsAtX = attribute "pointsAtX"
+pointsAtX value =
+    attribute "pointsAtX" value
+
 
 pointsAtY : String -> Attribute
-pointsAtY = attribute "pointsAtY"
+pointsAtY value =
+    attribute "pointsAtY" value
+
 
 pointsAtZ : String -> Attribute
-pointsAtZ = attribute "pointsAtZ"
+pointsAtZ value =
+    attribute "pointsAtZ" value
+
 
 preserveAlpha : String -> Attribute
-preserveAlpha = attribute "preserveAlpha"
+preserveAlpha value =
+    attribute "preserveAlpha" value
+
 
 preserveAspectRatio : String -> Attribute
-preserveAspectRatio = attribute "preserveAspectRatio"
+preserveAspectRatio value =
+    attribute "preserveAspectRatio" value
+
 
 primitiveUnits : String -> Attribute
-primitiveUnits = attribute "primitiveUnits"
+primitiveUnits value =
+    attribute "primitiveUnits" value
+
 
 r : String -> Attribute
-r = attribute "r"
+r value =
+    attribute "r" value
+
 
 radius : String -> Attribute
-radius = attribute "radius"
+radius value =
+    attribute "radius" value
+
 
 refX : String -> Attribute
-refX = attribute "refX"
+refX value =
+    attribute "refX" value
+
 
 refY : String -> Attribute
-refY = attribute "refY"
+refY value =
+    attribute "refY" value
+
 
 renderingIntent : String -> Attribute
-renderingIntent = attribute "rendering-intent"
+renderingIntent value =
+    attribute "rendering-intent" value
+
 
 repeatCount : String -> Attribute
-repeatCount = attribute "repeatCount"
+repeatCount value =
+    attribute "repeatCount" value
+
 
 repeatDur : String -> Attribute
-repeatDur = attribute "repeatDur"
+repeatDur value =
+    attribute "repeatDur" value
+
 
 requiredExtensions : String -> Attribute
-requiredExtensions = attribute "requiredExtensions"
+requiredExtensions value =
+    attribute "requiredExtensions" value
+
 
 requiredFeatures : String -> Attribute
-requiredFeatures = attribute "requiredFeatures"
+requiredFeatures value =
+    attribute "requiredFeatures" value
+
 
 restart : String -> Attribute
-restart = attribute "restart"
+restart value =
+    attribute "restart" value
+
 
 result : String -> Attribute
-result = attribute "result"
+result value =
+    attribute "result" value
+
 
 rotate : String -> Attribute
-rotate = attribute "rotate"
+rotate value =
+    attribute "rotate" value
+
 
 rx : String -> Attribute
-rx = attribute "rx"
+rx value =
+    attribute "rx" value
+
 
 ry : String -> Attribute
-ry = attribute "ry"
+ry value =
+    attribute "ry" value
+
 
 scale : String -> Attribute
-scale = attribute "scale"
+scale value =
+    attribute "scale" value
+
 
 seed : String -> Attribute
-seed = attribute "seed"
+seed value =
+    attribute "seed" value
+
 
 slope : String -> Attribute
-slope = attribute "slope"
+slope value =
+    attribute "slope" value
+
 
 spacing : String -> Attribute
-spacing = attribute "spacing"
+spacing value =
+    attribute "spacing" value
+
 
 specularConstant : String -> Attribute
-specularConstant = attribute "specularConstant"
+specularConstant value =
+    attribute "specularConstant" value
+
 
 specularExponent : String -> Attribute
-specularExponent = attribute "specularExponent"
+specularExponent value =
+    attribute "specularExponent" value
+
 
 speed : String -> Attribute
-speed = attribute "speed"
+speed value =
+    attribute "speed" value
+
 
 spreadMethod : String -> Attribute
-spreadMethod = attribute "spreadMethod"
+spreadMethod value =
+    attribute "spreadMethod" value
+
 
 startOffset : String -> Attribute
-startOffset = attribute "startOffset"
+startOffset value =
+    attribute "startOffset" value
+
 
 stdDeviation : String -> Attribute
-stdDeviation = attribute "stdDeviation"
+stdDeviation value =
+    attribute "stdDeviation" value
+
 
 stemh : String -> Attribute
-stemh = attribute "stemh"
+stemh value =
+    attribute "stemh" value
+
 
 stemv : String -> Attribute
-stemv = attribute "stemv"
+stemv value =
+    attribute "stemv" value
+
 
 stitchTiles : String -> Attribute
-stitchTiles = attribute "stitchTiles"
+stitchTiles value =
+    attribute "stitchTiles" value
+
 
 strikethroughPosition : String -> Attribute
-strikethroughPosition = attribute "strikethrough-position"
+strikethroughPosition value =
+    attribute "strikethrough-position" value
+
 
 strikethroughThickness : String -> Attribute
-strikethroughThickness = attribute "strikethrough-thickness"
+strikethroughThickness value =
+    attribute "strikethrough-thickness" value
+
 
 string : String -> Attribute
-string = attribute "string"
+string value =
+    attribute "string" value
+
 
 style : String -> Attribute
-style = attribute "style"
+style value =
+    attribute "style" value
+
 
 surfaceScale : String -> Attribute
-surfaceScale = attribute "surfaceScale"
+surfaceScale value =
+    attribute "surfaceScale" value
+
 
 systemLanguage : String -> Attribute
-systemLanguage = attribute "systemLanguage"
+systemLanguage value =
+    attribute "systemLanguage" value
+
 
 tableValues : String -> Attribute
-tableValues = attribute "tableValues"
+tableValues value =
+    attribute "tableValues" value
+
 
 target : String -> Attribute
-target = attribute "target"
+target value =
+    attribute "target" value
+
 
 targetX : String -> Attribute
-targetX = attribute "targetX"
+targetX value =
+    attribute "targetX" value
+
 
 targetY : String -> Attribute
-targetY = attribute "targetY"
+targetY value =
+    attribute "targetY" value
+
 
 textLength : String -> Attribute
-textLength = attribute "textLength"
+textLength value =
+    attribute "textLength" value
+
 
 title : String -> Attribute
-title = attribute "title"
+title value =
+    attribute "title" value
+
 
 to : String -> Attribute
-to = attribute "to"
+to value =
+    attribute "to" value
+
 
 transform : String -> Attribute
-transform = attribute "transform"
+transform value =
+    attribute "transform" value
+
 
 type' : String -> Attribute
-type' = attribute "type"
+type' value =
+    attribute "type" value
+
 
 u1 : String -> Attribute
-u1 = attribute "u1"
+u1 value =
+    attribute "u1" value
+
 
 u2 : String -> Attribute
-u2 = attribute "u2"
+u2 value =
+    attribute "u2" value
+
 
 underlinePosition : String -> Attribute
-underlinePosition = attribute "underline-position"
+underlinePosition value =
+    attribute "underline-position" value
+
 
 underlineThickness : String -> Attribute
-underlineThickness = attribute "underline-thickness"
+underlineThickness value =
+    attribute "underline-thickness" value
+
 
 unicode : String -> Attribute
-unicode = attribute "unicode"
+unicode value =
+    attribute "unicode" value
+
 
 unicodeRange : String -> Attribute
-unicodeRange = attribute "unicode-range"
+unicodeRange value =
+    attribute "unicode-range" value
+
 
 unitsPerEm : String -> Attribute
-unitsPerEm = attribute "units-per-em"
+unitsPerEm value =
+    attribute "units-per-em" value
+
 
 vAlphabetic : String -> Attribute
-vAlphabetic = attribute "v-alphabetic"
+vAlphabetic value =
+    attribute "v-alphabetic" value
+
 
 vHanging : String -> Attribute
-vHanging = attribute "v-hanging"
+vHanging value =
+    attribute "v-hanging" value
+
 
 vIdeographic : String -> Attribute
-vIdeographic = attribute "v-ideographic"
+vIdeographic value =
+    attribute "v-ideographic" value
+
 
 vMathematical : String -> Attribute
-vMathematical = attribute "v-mathematical"
+vMathematical value =
+    attribute "v-mathematical" value
+
 
 values : String -> Attribute
-values = attribute "values"
+values value =
+    attribute "values" value
+
 
 version : String -> Attribute
-version = attribute "version"
+version value =
+    attribute "version" value
+
 
 vertAdvY : String -> Attribute
-vertAdvY = attribute "vert-adv-y"
+vertAdvY value =
+    attribute "vert-adv-y" value
+
 
 vertOriginX : String -> Attribute
-vertOriginX = attribute "vert-origin-x"
+vertOriginX value =
+    attribute "vert-origin-x" value
+
 
 vertOriginY : String -> Attribute
-vertOriginY = attribute "vert-origin-y"
+vertOriginY value =
+    attribute "vert-origin-y" value
+
 
 viewBox : String -> Attribute
-viewBox = attribute "viewBox"
+viewBox value =
+    attribute "viewBox" value
+
 
 viewTarget : String -> Attribute
-viewTarget = attribute "viewTarget"
+viewTarget value =
+    attribute "viewTarget" value
+
 
 width : String -> Attribute
-width = attribute "width"
+width value =
+    attribute "width" value
+
 
 widths : String -> Attribute
-widths = attribute "widths"
+widths value =
+    attribute "widths" value
+
 
 x : String -> Attribute
-x = attribute "x"
+x value =
+    attribute "x" value
+
 
 xHeight : String -> Attribute
-xHeight = attribute "x-height"
+xHeight value =
+    attribute "x-height" value
+
 
 x1 : String -> Attribute
-x1 = attribute "x1"
+x1 value =
+    attribute "x1" value
+
 
 x2 : String -> Attribute
-x2 = attribute "x2"
+x2 value =
+    attribute "x2" value
+
 
 xChannelSelector : String -> Attribute
-xChannelSelector = attribute "xChannelSelector"
+xChannelSelector value =
+    attribute "xChannelSelector" value
+
 
 xlinkActuate : String -> Attribute
-xlinkActuate = attribute "xlink:actuate"
+xlinkActuate value =
+    attribute "xlink:actuate" value
+
 
 xlinkArcrole : String -> Attribute
-xlinkArcrole = attribute "xlink:arcrole"
+xlinkArcrole value =
+    attribute "xlink:arcrole" value
+
 
 xlinkHref : String -> Attribute
-xlinkHref = attribute "xlink:href"
+xlinkHref value =
+    attribute "xlink:href" value
+
 
 xlinkRole : String -> Attribute
-xlinkRole = attribute "xlink:role"
+xlinkRole value =
+    attribute "xlink:role" value
+
 
 xlinkShow : String -> Attribute
-xlinkShow = attribute "xlink:show"
+xlinkShow value =
+    attribute "xlink:show" value
+
 
 xlinkTitle : String -> Attribute
-xlinkTitle = attribute "xlink:title"
+xlinkTitle value =
+    attribute "xlink:title" value
+
 
 xlinkType : String -> Attribute
-xlinkType = attribute "xlink:type"
+xlinkType value =
+    attribute "xlink:type" value
+
 
 xmlBase : String -> Attribute
-xmlBase = attribute "xml:base"
+xmlBase value =
+    attribute "xml:base" value
+
 
 xmlLang : String -> Attribute
-xmlLang = attribute "xml:lang"
+xmlLang value =
+    attribute "xml:lang" value
+
 
 xmlSpace : String -> Attribute
-xmlSpace = attribute "xml:space"
+xmlSpace value =
+    attribute "xml:space" value
+
 
 y : String -> Attribute
-y = attribute "y"
+y value =
+    attribute "y" value
+
 
 y1 : String -> Attribute
-y1 = attribute "y1"
+y1 value =
+    attribute "y1" value
+
 
 y2 : String -> Attribute
-y2 = attribute "y2"
+y2 value =
+    attribute "y2" value
+
 
 yChannelSelector : String -> Attribute
-yChannelSelector = attribute "yChannelSelector"
+yChannelSelector value =
+    attribute "yChannelSelector" value
+
 
 z : String -> Attribute
-z = attribute "z"
+z value =
+    attribute "z" value
+
 
 zoomAndPan : String -> Attribute
-zoomAndPan = attribute "zoomAndPan"
+zoomAndPan value =
+    attribute "zoomAndPan" value
+
 
 
 -- Presentation attributes
 
 alignmentBaseline : String -> Attribute
-alignmentBaseline = attribute "alignment-baseline"
+alignmentBaseline value =
+    attribute "alignment-baseline" value
+
 
 baselineShift : String -> Attribute
-baselineShift = attribute "baseline-shift"
+baselineShift value =
+    attribute "baseline-shift" value
+
 
 clipPath : String -> Attribute
-clipPath = attribute "clip-path"
+clipPath value =
+    attribute "clip-path" value
+
 
 clipRule : String -> Attribute
-clipRule = attribute "clip-rule"
+clipRule value =
+    attribute "clip-rule" value
+
 
 clip : String -> Attribute
-clip = attribute "clip"
+clip value =
+    attribute "clip" value
+
 
 colorInterpolationFilters : String -> Attribute
-colorInterpolationFilters = attribute "color-interpolation-filters"
+colorInterpolationFilters value =
+    attribute "color-interpolation-filters" value
+
 
 colorInterpolation : String -> Attribute
-colorInterpolation = attribute "color-interpolation"
+colorInterpolation value =
+    attribute "color-interpolation" value
+
 
 colorProfile : String -> Attribute
-colorProfile = attribute "color-profile"
+colorProfile value =
+    attribute "color-profile" value
+
 
 colorRendering : String -> Attribute
-colorRendering = attribute "color-rendering"
+colorRendering value =
+    attribute "color-rendering" value
+
 
 color : String -> Attribute
-color = attribute "color"
+color value =
+    attribute "color" value
+
 
 cursor : String -> Attribute
-cursor = attribute "cursor"
+cursor value =
+    attribute "cursor" value
+
 
 direction : String -> Attribute
-direction = attribute "direction"
+direction value =
+    attribute "direction" value
+
 
 display : String -> Attribute
-display = attribute "display"
+display value =
+    attribute "display" value
+
 
 dominantBaseline : String -> Attribute
-dominantBaseline = attribute "dominant-baseline"
+dominantBaseline value =
+    attribute "dominant-baseline" value
+
 
 enableBackground : String -> Attribute
-enableBackground = attribute "enable-background"
+enableBackground value =
+    attribute "enable-background" value
+
 
 fillOpacity : String -> Attribute
-fillOpacity = attribute "fill-opacity"
+fillOpacity value =
+    attribute "fill-opacity" value
+
 
 fillRule : String -> Attribute
-fillRule = attribute "fill-rule"
+fillRule value =
+    attribute "fill-rule" value
+
 
 fill : String -> Attribute
-fill = attribute "fill"
+fill value =
+    attribute "fill" value
+
 
 filter : String -> Attribute
-filter = attribute "filter"
+filter value =
+    attribute "filter" value
+
 
 floodColor : String -> Attribute
-floodColor = attribute "flood-color"
+floodColor value =
+    attribute "flood-color" value
+
 
 floodOpacity : String -> Attribute
-floodOpacity = attribute "flood-opacity"
+floodOpacity value =
+    attribute "flood-opacity" value
+
 
 fontFamily : String -> Attribute
-fontFamily = attribute "font-family"
+fontFamily value =
+    attribute "font-family" value
+
 
 fontSizeAdjust : String -> Attribute
-fontSizeAdjust = attribute "font-size-adjust"
+fontSizeAdjust value =
+    attribute "font-size-adjust" value
+
 
 fontSize : String -> Attribute
-fontSize = attribute "font-size"
+fontSize value =
+    attribute "font-size" value
+
 
 fontStretch : String -> Attribute
-fontStretch = attribute "font-stretch"
+fontStretch value =
+    attribute "font-stretch" value
+
 
 fontStyle : String -> Attribute
-fontStyle = attribute "font-style"
+fontStyle value =
+    attribute "font-style" value
+
 
 fontVariant : String -> Attribute
-fontVariant = attribute "font-variant"
+fontVariant value =
+    attribute "font-variant" value
+
 
 fontWeight : String -> Attribute
-fontWeight = attribute "font-weight"
+fontWeight value =
+    attribute "font-weight" value
+
 
 glyphOrientationHorizontal : String -> Attribute
-glyphOrientationHorizontal = attribute "glyph-orientation-horizontal"
+glyphOrientationHorizontal value =
+    attribute "glyph-orientation-horizontal" value
+
 
 glyphOrientationVertical : String -> Attribute
-glyphOrientationVertical = attribute "glyph-orientation-vertical"
+glyphOrientationVertical value =
+    attribute "glyph-orientation-vertical" value
+
 
 imageRendering : String -> Attribute
-imageRendering = attribute "image-rendering"
+imageRendering value =
+    attribute "image-rendering" value
+
 
 kerning : String -> Attribute
-kerning = attribute "kerning"
+kerning value =
+    attribute "kerning" value
+
 
 letterSpacing : String -> Attribute
-letterSpacing = attribute "letter-spacing"
+letterSpacing value =
+    attribute "letter-spacing" value
+
 
 lightingColor : String -> Attribute
-lightingColor = attribute "lighting-color"
+lightingColor value =
+    attribute "lighting-color" value
+
 
 markerEnd : String -> Attribute
-markerEnd = attribute "marker-end"
+markerEnd value =
+    attribute "marker-end" value
+
 
 markerMid : String -> Attribute
-markerMid = attribute "marker-mid"
+markerMid value =
+    attribute "marker-mid" value
+
 
 markerStart : String -> Attribute
-markerStart = attribute "marker-start"
+markerStart value =
+    attribute "marker-start" value
+
 
 mask : String -> Attribute
-mask = attribute "mask"
+mask value =
+    attribute "mask" value
+
 
 opacity : String -> Attribute
-opacity = attribute "opacity"
+opacity value =
+    attribute "opacity" value
+
 
 overflow : String -> Attribute
-overflow = attribute "overflow"
+overflow value =
+    attribute "overflow" value
+
 
 pointerEvents : String -> Attribute
-pointerEvents = attribute "pointer-events"
+pointerEvents value =
+    attribute "pointer-events" value
+
 
 shapeRendering : String -> Attribute
-shapeRendering = attribute "shape-rendering"
+shapeRendering value =
+    attribute "shape-rendering" value
+
 
 stopColor : String -> Attribute
-stopColor = attribute "stop-color"
+stopColor value =
+    attribute "stop-color" value
+
 
 stopOpacity : String -> Attribute
-stopOpacity = attribute "stop-opacity"
+stopOpacity value =
+    attribute "stop-opacity" value
+
 
 strokeDasharray : String -> Attribute
-strokeDasharray = attribute "stroke-dasharray"
+strokeDasharray value =
+    attribute "stroke-dasharray" value
+
 
 strokeDashoffset : String -> Attribute
-strokeDashoffset = attribute "stroke-dashoffset"
+strokeDashoffset value =
+    attribute "stroke-dashoffset" value
+
 
 strokeLinecap : String -> Attribute
-strokeLinecap = attribute "stroke-linecap"
+strokeLinecap value =
+    attribute "stroke-linecap" value
+
 
 strokeLinejoin : String -> Attribute
-strokeLinejoin = attribute "stroke-linejoin"
+strokeLinejoin value =
+    attribute "stroke-linejoin" value
+
 
 strokeMiterlimit : String -> Attribute
-strokeMiterlimit = attribute "stroke-miterlimit"
+strokeMiterlimit value =
+    attribute "stroke-miterlimit" value
+
 
 strokeOpacity : String -> Attribute
-strokeOpacity = attribute "stroke-opacity"
+strokeOpacity value =
+    attribute "stroke-opacity" value
+
 
 strokeWidth : String -> Attribute
-strokeWidth = attribute "stroke-width"
+strokeWidth value =
+    attribute "stroke-width" value
+
 
 stroke : String -> Attribute
-stroke = attribute "stroke"
+stroke value =
+    attribute "stroke" value
+
 
 textAnchor : String -> Attribute
-textAnchor = attribute "text-anchor"
+textAnchor value =
+    attribute "text-anchor" value
+
 
 textDecoration : String -> Attribute
-textDecoration = attribute "text-decoration"
+textDecoration value =
+    attribute "text-decoration" value
+
 
 textRendering : String -> Attribute
-textRendering = attribute "text-rendering"
+textRendering value =
+    attribute "text-rendering" value
+
 
 unicodeBidi : String -> Attribute
-unicodeBidi = attribute "unicode-bidi"
+unicodeBidi value =
+    attribute "unicode-bidi" value
+
 
 visibility : String -> Attribute
-visibility = attribute "visibility"
+visibility value =
+    attribute "visibility" value
+
 
 wordSpacing : String -> Attribute
-wordSpacing = attribute "word-spacing"
+wordSpacing value =
+    attribute "word-spacing" value
+
 
 writingMode : String -> Attribute
-writingMode = attribute "writing-mode"
+writingMode value =
+    attribute "writing-mode" value
+

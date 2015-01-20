@@ -49,46 +49,60 @@ import Json.Encode as Json
 
 type alias Svg = VirtualDom.Node
 
+
 type alias Attribute = VirtualDom.Property
+
 
 svgNamespace : Attribute
 svgNamespace =
     VirtualDom.property "namespace" (Json.string "http://www.w3.org/2000/svg")
 
-svgElement : String -> List Attribute -> List Svg -> Svg
-svgElement name attributes = VirtualDom.node name (svgNamespace :: attributes)
+
+svgNode : String -> List Attribute -> List Svg -> Svg
+svgNode name attributes children =
+  VirtualDom.node name (svgNamespace :: attributes) children
+
 
 svg : List Html.Attribute -> List Svg -> Html.Html
-svg = svgElement "svg"
+svg attributes children =
+    svgNode "svg" attributes children
+
 
 foreignObject : List Attribute -> List Html.Html -> Svg
-foreignObject = svgElement "foreignObject"
+foreignObject attributes children =
+    svgNode "foreignObject" attributes children
 
 
 -- Animation elements
 
 animate : List Attribute -> List Svg -> Svg
-animate = svgElement "animate"
+animate attributes children =
+    svgNode "animate" attributes children
 
 
 animateColor : List Attribute -> List Svg -> Svg
-animateColor = svgElement "animateColor"
+animateColor attributes children =
+    svgNode "animateColor" attributes children
 
 
 animateMotion : List Attribute -> List Svg -> Svg
-animateMotion = svgElement "animateMotion"
+animateMotion attributes children =
+    svgNode "animateMotion" attributes children
 
 
 animateTransform : List Attribute -> List Svg -> Svg
-animateTransform = svgElement "animateTransform"
+animateTransform attributes children =
+    svgNode "animateTransform" attributes children
 
 
 mpath : List Attribute -> List Svg -> Svg
-mpath = svgElement "mpath"
+mpath attributes children =
+    svgNode "mpath" attributes children
 
 
 set : List Attribute -> List Svg -> Svg
-set = svgElement "set"
+set attributes children =
+    svgNode "set" attributes children
 
 
 -- Container elements
@@ -96,191 +110,235 @@ set = svgElement "set"
 {-| The SVG Anchor Element defines a hyperlink.
 -}
 a : List Attribute -> List Svg -> Svg
-a = svgElement "a"
+a attributes children =
+    svgNode "a" attributes children
 
 
 defs : List Attribute -> List Svg -> Svg
-defs = svgElement "defs"
+defs attributes children =
+    svgNode "defs" attributes children
 
 
 g : List Attribute -> List Svg -> Svg
-g = svgElement "g"
+g attributes children =
+    svgNode "g" attributes children
 
 
 marker : List Attribute -> List Svg -> Svg
-marker = svgElement "marker"
+marker attributes children =
+    svgNode "marker" attributes children
 
 
 mask : List Attribute -> List Svg -> Svg
-mask = svgElement "mask"
+mask attributes children =
+    svgNode "mask" attributes children
 
 
 missingGlyph : List Attribute -> List Svg -> Svg
-missingGlyph = svgElement "missingGlyph"
+missingGlyph attributes children =
+    svgNode "missingGlyph" attributes children
 
 
 pattern : List Attribute -> List Svg -> Svg
-pattern = svgElement "pattern"
+pattern attributes children =
+    svgNode "pattern" attributes children
 
 
 switch : List Attribute -> List Svg -> Svg
-switch = svgElement "switch"
+switch attributes children =
+    svgNode "switch" attributes children
 
 
 symbol : List Attribute -> List Svg -> Svg
-symbol = svgElement "symbol"
+symbol attributes children =
+    svgNode "symbol" attributes children
 
 
 
 -- Descriptive elements
 
 desc : List Attribute -> List Svg -> Svg
-desc = svgElement "desc"
+desc attributes children =
+    svgNode "desc" attributes children
 
 
 metadata : List Attribute -> List Svg -> Svg
-metadata = svgElement "metadata"
+metadata attributes children =
+    svgNode "metadata" attributes children
 
 
 title : List Attribute -> List Svg -> Svg
-title = svgElement "title"
+title attributes children =
+    svgNode "title" attributes children
 
 
 
 -- Filter primitive elements
 
 feBlend : List Attribute -> List Svg -> Svg
-feBlend = svgElement "feBlend"
+feBlend attributes children =
+    svgNode "feBlend" attributes children
 
 
 feColorMatrix : List Attribute -> List Svg -> Svg
-feColorMatrix = svgElement "feColorMatrix"
+feColorMatrix attributes children =
+    svgNode "feColorMatrix" attributes children
 
 
 feComponentTransfer : List Attribute -> List Svg -> Svg
-feComponentTransfer = svgElement "feComponentTransfer"
+feComponentTransfer attributes children =
+    svgNode "feComponentTransfer" attributes children
 
 
 feComposite : List Attribute -> List Svg -> Svg
-feComposite = svgElement "feComposite"
+feComposite attributes children =
+    svgNode "feComposite" attributes children
 
 
 feConvolveMatrix : List Attribute -> List Svg -> Svg
-feConvolveMatrix = svgElement "feConvolveMatrix"
+feConvolveMatrix attributes children =
+    svgNode "feConvolveMatrix" attributes children
 
 
 feDiffuseLighting : List Attribute -> List Svg -> Svg
-feDiffuseLighting = svgElement "feDiffuseLighting"
+feDiffuseLighting attributes children =
+    svgNode "feDiffuseLighting" attributes children
 
 
 feDisplacementMap : List Attribute -> List Svg -> Svg
-feDisplacementMap = svgElement "feDisplacementMap"
+feDisplacementMap attributes children =
+    svgNode "feDisplacementMap" attributes children
 
 
 feFlood : List Attribute -> List Svg -> Svg
-feFlood = svgElement "feFlood"
+feFlood attributes children =
+    svgNode "feFlood" attributes children
 
 
 feFuncA : List Attribute -> List Svg -> Svg
-feFuncA = svgElement "feFuncA"
+feFuncA attributes children =
+    svgNode "feFuncA" attributes children
 
 
 feFuncB : List Attribute -> List Svg -> Svg
-feFuncB = svgElement "feFuncB"
+feFuncB attributes children =
+    svgNode "feFuncB" attributes children
 
 
 feFuncG : List Attribute -> List Svg -> Svg
-feFuncG = svgElement "feFuncG"
+feFuncG attributes children =
+    svgNode "feFuncG" attributes children
 
 
 feFuncR : List Attribute -> List Svg -> Svg
-feFuncR = svgElement "feFuncR"
+feFuncR attributes children =
+    svgNode "feFuncR" attributes children
 
 
 feGaussianBlur : List Attribute -> List Svg -> Svg
-feGaussianBlur = svgElement "feGaussianBlur"
+feGaussianBlur attributes children =
+    svgNode "feGaussianBlur" attributes children
 
 
 feImage : List Attribute -> List Svg -> Svg
-feImage = svgElement "feImage"
+feImage attributes children =
+    svgNode "feImage" attributes children
 
 
 feMerge : List Attribute -> List Svg -> Svg
-feMerge = svgElement "feMerge"
+feMerge attributes children =
+    svgNode "feMerge" attributes children
 
 
 feMergeNode : List Attribute -> List Svg -> Svg
-feMergeNode = svgElement "feMergeNode"
+feMergeNode attributes children =
+    svgNode "feMergeNode" attributes children
 
 
 feMorphology : List Attribute -> List Svg -> Svg
-feMorphology = svgElement "feMorphology"
+feMorphology attributes children =
+    svgNode "feMorphology" attributes children
 
 
 feOffset : List Attribute -> List Svg -> Svg
-feOffset = svgElement "feOffset"
+feOffset attributes children =
+    svgNode "feOffset" attributes children
 
 
 feSpecularLighting : List Attribute -> List Svg -> Svg
-feSpecularLighting = svgElement "feSpecularLighting"
+feSpecularLighting attributes children =
+    svgNode "feSpecularLighting" attributes children
 
 
 feTile : List Attribute -> List Svg -> Svg
-feTile = svgElement "feTile"
+feTile attributes children =
+    svgNode "feTile" attributes children
 
 
 feTurbulence : List Attribute -> List Svg -> Svg
-feTurbulence = svgElement "feTurbulence"
+feTurbulence attributes children =
+    svgNode "feTurbulence" attributes children
 
 
 
 -- Font elements
 
 font : List Attribute -> List Svg -> Svg
-font = svgElement "font"
+font attributes children =
+    svgNode "font" attributes children
 
 
 fontFace : List Attribute -> List Svg -> Svg
-fontFace = svgElement "fontFace"
+fontFace attributes children =
+    svgNode "fontFace" attributes children
 
 
 fontFaceFormat : List Attribute -> List Svg -> Svg
-fontFaceFormat = svgElement "fontFaceFormat"
+fontFaceFormat attributes children =
+    svgNode "fontFaceFormat" attributes children
 
 
 fontFaceName : List Attribute -> List Svg -> Svg
-fontFaceName = svgElement "fontFaceName"
+fontFaceName attributes children =
+    svgNode "fontFaceName" attributes children
 
 
 fontFaceSrc : List Attribute -> List Svg -> Svg
-fontFaceSrc = svgElement "fontFaceSrc"
+fontFaceSrc attributes children =
+    svgNode "fontFaceSrc" attributes children
 
 
 fontFaceUri : List Attribute -> List Svg -> Svg
-fontFaceUri = svgElement "fontFaceUri"
+fontFaceUri attributes children =
+    svgNode "fontFaceUri" attributes children
 
 
 hkern : List Attribute -> List Svg -> Svg
-hkern = svgElement "hkern"
+hkern attributes children =
+    svgNode "hkern" attributes children
 
 
 vkern : List Attribute -> List Svg -> Svg
-vkern = svgElement "vkern"
+vkern attributes children =
+    svgNode "vkern" attributes children
 
 
 
 -- Gradient elements
 
 linearGradient : List Attribute -> List Svg -> Svg
-linearGradient = svgElement "linearGradient"
+linearGradient attributes children =
+    svgNode "linearGradient" attributes children
 
 
 radialGradient : List Attribute -> List Svg -> Svg
-radialGradient = svgElement "radialGradient"
+radialGradient attributes children =
+    svgNode "radialGradient" attributes children
 
 
 stop : List Attribute -> List Svg -> Svg
-stop = svgElement "stop"
+stop attributes children =
+    svgNode "stop" attributes children
 
 
 
@@ -292,27 +350,33 @@ a center point and a radius.
     circle [ cx "60", cy "60", r "50" ] []
 -}
 circle : List Attribute -> List Svg -> Svg
-circle = svgElement "circle"
+circle attributes children =
+    svgNode "circle" attributes children
 
 
 ellipse : List Attribute -> List Svg -> Svg
-ellipse = svgElement "ellipse"
+ellipse attributes children =
+    svgNode "ellipse" attributes children
 
 
 image : List Attribute -> List Svg -> Svg
-image = svgElement "image"
+image attributes children =
+    svgNode "image" attributes children
 
 
 line : List Attribute -> List Svg -> Svg
-line = svgElement "line"
+line attributes children =
+    svgNode "line" attributes children
 
 
 path : List Attribute -> List Svg -> Svg
-path = svgElement "path"
+path attributes children =
+    svgNode "path" attributes children
 
 
 polygon : List Attribute -> List Svg -> Svg
-polygon = svgElement "polygon"
+polygon attributes children =
+    svgNode "polygon" attributes children
 
 
 {-| The polyline element is an SVG basic shape, used to create a series of
@@ -322,97 +386,119 @@ create open shapes.
     polyline [ fill "none", stroke "black", points "20,100 40,60 70,80 100,20" ] []
 -}
 polyline : List Attribute -> List Svg -> Svg
-polyline = svgElement "polyline"
+polyline attributes children =
+    svgNode "polyline" attributes children
 
 
 rect : List Attribute -> List Svg -> Svg
-rect = svgElement "rect"
+rect attributes children =
+    svgNode "rect" attributes children
 
 
 use : List Attribute -> List Svg -> Svg
-use = svgElement "use"
+use attributes children =
+    svgNode "use" attributes children
 
 
 
 -- Light source elements
 
 feDistantLight : List Attribute -> List Svg -> Svg
-feDistantLight = svgElement "feDistantLight"
+feDistantLight attributes children =
+    svgNode "feDistantLight" attributes children
 
 
 fePointLight : List Attribute -> List Svg -> Svg
-fePointLight = svgElement "fePointLight"
+fePointLight attributes children =
+    svgNode "fePointLight" attributes children
 
 
 feSpotLight : List Attribute -> List Svg -> Svg
-feSpotLight = svgElement "feSpotLight"
+feSpotLight attributes children =
+    svgNode "feSpotLight" attributes children
 
 
 -- Text content elements
 
 altGlyph : List Attribute -> List Svg -> Svg
-altGlyph = svgElement "altGlyph"
+altGlyph attributes children =
+    svgNode "altGlyph" attributes children
 
 
 altGlyphDef : List Attribute -> List Svg -> Svg
-altGlyphDef = svgElement "altGlyphDef"
+altGlyphDef attributes children =
+    svgNode "altGlyphDef" attributes children
 
 
 altGlyphItem : List Attribute -> List Svg -> Svg
-altGlyphItem = svgElement "altGlyphItem"
+altGlyphItem attributes children =
+    svgNode "altGlyphItem" attributes children
 
 
 glyph : List Attribute -> List Svg -> Svg
-glyph = svgElement "glyph"
+glyph attributes children =
+    svgNode "glyph" attributes children
 
 
 glyphRef : List Attribute -> List Svg -> Svg
-glyphRef = svgElement "glyphRef"
+glyphRef attributes children =
+    svgNode "glyphRef" attributes children
 
 
 textPath : List Attribute -> List Svg -> Svg
-textPath = svgElement "textPath"
+textPath attributes children =
+    svgNode "textPath" attributes children
 
 
 text : List Attribute -> List Svg -> Svg
-text = svgElement "text"
+text attributes children =
+    svgNode "text" attributes children
 
 
 tref : List Attribute -> List Svg -> Svg
-tref = svgElement "tref"
+tref attributes children =
+    svgNode "tref" attributes children
 
 
 tspan : List Attribute -> List Svg -> Svg
-tspan = svgElement "tspan"
+tspan attributes children =
+    svgNode "tspan" attributes children
 
 
 -- Uncategorized elements
 
 clipPath : List Attribute -> List Svg -> Svg
-clipPath = svgElement "clipPath"
+clipPath attributes children =
+    svgNode "clipPath" attributes children
 
 
 colorProfile : List Attribute -> List Svg -> Svg
-colorProfile = svgElement "colorProfile"
+colorProfile attributes children =
+    svgNode "colorProfile" attributes children
 
 
 cursor : List Attribute -> List Svg -> Svg
-cursor = svgElement "cursor"
+cursor attributes children =
+    svgNode "cursor" attributes children
 
 
 filter : List Attribute -> List Svg -> Svg
-filter = svgElement "filter"
+filter attributes children =
+    svgNode "filter" attributes children
 
 
 script : List Attribute -> List Svg -> Svg
-script = svgElement "script"
+script attributes children =
+    svgNode "script" attributes children
 
 
 style : List Attribute -> List Svg -> Svg
-style = svgElement "style"
+style attributes children =
+    svgNode "style" attributes children
 
 
 view : List Attribute -> List Svg -> Svg
-view = svgElement "view"
+view attributes children =
+    svgNode "view" attributes children
 
 
