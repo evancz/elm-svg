@@ -1,20 +1,20 @@
-import Svg
-import Svg.Attributes as SVGA
+import Svg (..)
+import Svg.Attributes (..)
 import Html (Html)
 
-poly l = Svg.polygon l []
 
 main : Html
-main = Svg.svg
-         [ SVGA.width "9cm"
-         , SVGA.height "9cm"
-         , SVGA.viewBox "291 388 169 169"
-         ]
-         [ poly [ SVGA.style "fill: #5fb4cd", SVGA.points "376,476 456,556 296,556 "         ]
-         , poly [ SVGA.style "fill: #f0a500", SVGA.points "376,470 336,430 416,430 "         ]
-         , poly [ SVGA.style "fill: #5fb4cd", SVGA.points "460,388 380,388 460,468 "         ]
-         , poly [ SVGA.style "fill: #f0a500", SVGA.points "420,514 460,474 460,554 "         ]
-         , poly [ SVGA.style "fill: #8cd737", SVGA.points "418,432 458,472 418,512 378,472 " ]
-         , poly [ SVGA.style "fill: #5a6481", SVGA.points "292,392 372,472 292,552 "         ]
-         , poly [ SVGA.style "fill: #8cd737", SVGA.points "294,388 374,388 414,428 334,428 " ]
-         ]
+main =
+  svg [ version "1.1", x "0", y "0", viewBox "0 0 323.141 322.95" ]
+    [ polygon [ fill "#F0AD00", points "161.649,152.782 231.514,82.916 91.783,82.916" ] []
+    , polygon [ fill "#7FD13B", points "8.867,0 79.241,70.375 232.213,70.375 161.838,0" ] []
+    , rect
+        [ fill "#7FD13B", x "192.99", y "107.392", width "107.676", height "108.167"
+        , transform "matrix(0.7071 0.7071 -0.7071 0.7071 186.4727 -127.2386)"
+        ]
+        []
+    , polygon [ fill "#60B5CC", points "323.298,143.724 323.298,0 179.573,0" ] []
+    , polygon [ fill "#5A6378", points "152.781,161.649 0,8.868 0,314.432" ] []
+    , polygon [ fill "#F0AD00", points "255.522,246.655 323.298,314.432 323.298,178.879" ] []
+    , polygon [ fill "#60B5CC", points "161.649,170.517 8.869,323.298 314.43,323.298" ] []
+    ]
