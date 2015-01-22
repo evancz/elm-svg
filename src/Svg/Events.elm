@@ -1,6 +1,16 @@
 module Svg.Events where
 {-|
 
+# Animation event attributes
+@docs onBegin, onEnd, onRepeat
+
+# Document event attributes
+@docs onAbort, onError, onResize, onScroll, onLoad, onUnload, onZoom
+
+# Graphical event attributes
+@docs onActivate, onClick, onFocusIn, onFocusOut, onMouseDown, onMouseMove,
+  onMouseOut, onMouseOver, onMouseUp
+
 -}
 
 import Svg (Attribute)

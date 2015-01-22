@@ -17,24 +17,21 @@ module Svg where
 @docs a, defs, g, marker, mask, missingGlyph, pattern, switch, symbol
 
 # Text
-@docs
-  altGlyph, altGlyphDef, altGlyphItem, glyph, glyphRef,
-  textPath, text, tref, tspan
+@docs altGlyph, altGlyphDef, altGlyphItem, glyph, glyphRef, textPath, text,
+  tref, tspan
 
 # Fonts
-@docs
-  font, fontFace, fontFaceFormat, fontFaceName, fontFaceSrc, fontFaceUri,
+@docs font, fontFace, fontFaceFormat, fontFaceName, fontFaceSrc, fontFaceUri,
   hkern, vkern
 
 # Gradients
 @docs linearGradient, radialGradient, stop
 
 # Filters
-@docs
-  feBlend, feColorMatrix, feComponentTransfer, feComposite, feConvolveMatrix,
-  feDiffuseLighting, feDisplacementMap, feFlood, feFuncA, feFuncB, feFuncG,
-  feFuncR, feGaussianBlur, feImage, feMerge, feMergeNode, feMorphology,
-  feOffset, feSpecularLighting, feTile, feTurbulence
+@docs feBlend, feColorMatrix, feComponentTransfer, feComposite,
+  feConvolveMatrix, feDiffuseLighting, feDisplacementMap, feFlood, feFuncA,
+  feFuncB, feFuncG, feFuncR, feGaussianBlur, feImage, feMerge, feMergeNode,
+  feMorphology, feOffset, feSpecularLighting, feTile, feTurbulence
 
 # Light source elements
 @docs feDistantLight, fePointLight, feSpotLight
