@@ -40,6 +40,7 @@ module Svg where
 @docs clipPath, colorProfile, cursor, filter, script, style, view
 -}
 
+import List ((::))
 import Html
 import VirtualDom
 import Json.Encode as Json
