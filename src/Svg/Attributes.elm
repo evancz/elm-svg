@@ -47,8 +47,8 @@ module Svg.Attributes where
 
 -}
 
-import Svg (Attribute)
-import VirtualDom (attribute)
+import Svg exposing (Attribute)
+import VirtualDom exposing (attribute)
 
 
 -- Regular attributes

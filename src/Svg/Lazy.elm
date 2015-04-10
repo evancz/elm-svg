@@ -17,7 +17,7 @@ benchmark to be sure!
 @docs lazy, lazy2, lazy3
 -}
 
-import Svg (Svg)
+import Svg exposing (Svg)
 import VirtualDom
 
 

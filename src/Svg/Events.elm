@@ -13,7 +13,7 @@ module Svg.Events where
 
 -}
 
-import Svg (Attribute)
+import Svg exposing (Attribute)
 import Json.Decode as Json
 import Signal
 import VirtualDom
