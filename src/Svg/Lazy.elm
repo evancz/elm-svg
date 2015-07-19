@@ -1,5 +1,5 @@
 module Svg.Lazy
-    (lazy, lazy2, lazy3
+    ( lazy, lazy2, lazy3
     ) where
 
 {-| Since all Elm functions are pure we have a guarantee that the same input
@@ -21,14 +21,28 @@ import Svg exposing (Svg)
 import VirtualDom
 
 
+{-| A performance optimization that delays the building of virtual DOM nodes.
+
+Calling `(view model)` will definitely build some virtual DOM, perhaps a lot of
+it. Calling `(lazy view model)` delays the call until later. During diffing, we
+can check to see if `model` is referentially equal to the previous value used,
+and if so, we just stop. No need to build up the tree structure and diff it,
+we know if the input to `view` is the same, the output must be the same!
+-}
 lazy : (a -> Svg) -> a -> Svg
 lazy =
-    VirtualDom.lazy
+  VirtualDom.lazy
 
+
+{-| Same as `lazy` but checks on two arguments.
+-}
 lazy2 : (a -> b -> Svg) -> a -> b -> Svg
 lazy2 =
-    VirtualDom.lazy2
+  VirtualDom.lazy2
 
+
+{-| Same as `lazy` but checks on three arguments.
+-}
 lazy3 : (a -> b -> c -> Svg) -> a -> b -> c -> Svg
 lazy3 =
-    VirtualDom.lazy3
+  VirtualDom.lazy3
