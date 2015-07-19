@@ -1,11 +1,11 @@
 module Svg
-    ( node, Svg, Attribute
+    ( text, node, Svg, Attribute
     , svg, foreignObject
     , circle, ellipse, image, line, path, polygon, polyline, rect, use
     , animate, animateColor, animateMotion, animateTransform, mpath, set
     , desc, metadata, title
     , a, defs, g, marker, mask, missingGlyph, pattern, switch, symbol
-    , altGlyph, altGlyphDef, altGlyphItem, glyph, glyphRef, textPath, text
+    , altGlyph, altGlyphDef, altGlyphItem, glyph, glyphRef, textPath, text'
     , tref, tspan
     , font, fontFace, fontFaceFormat, fontFaceName, fontFaceSrc, fontFaceUri
     , hkern, vkern
@@ -20,7 +20,7 @@ module Svg
 {-|
 
 # SVG Nodes
-@docs node, Svg, Attribute
+@docs Svg, Attribute, node, text
 
 # HTML Embedding
 @docs svg, foreignObject
@@ -38,7 +38,7 @@ module Svg
 @docs a, defs, g, marker, mask, missingGlyph, pattern, switch, symbol
 
 # Text
-@docs altGlyph, altGlyphDef, altGlyphItem, glyph, glyphRef, textPath, text,
+@docs altGlyph, altGlyphDef, altGlyphItem, glyph, glyphRef, textPath, text',
   tref, tspan
 
 # Fonts
@@ -67,8 +67,11 @@ import Json.Encode as Json
 
 
 
-{-| The core building block to create SVG. It is backed by `VirtualDom.Node`
-in `evancz/virtual-dom` but that is not a super crucial detail.
+{-| The core building block to create SVG. This library is filled with helper
+functions to create these `Svg` values.
+
+This is backed by `VirtualDom.Node` in `evancz/virtual-dom`, but you do not
+need to know any details about that to use this library!
 -}
 type alias Svg = VirtualDom.Node
 
@@ -83,14 +86,43 @@ svgNamespace =
   VirtualDom.property "namespace" (Json.string "http://www.w3.org/2000/svg")
 
 
-{-|-}
+{-| Create any SVG node. To create a `<rect>` helper function, you would write:
+
+    rect : List Attribute -> List Svg -> Svg
+    rect attributes children =
+        node "rect" attributes children
+
+You should always be able to use the helper functions already defined in this
+library though!
+-}
 node : String -> List Attribute -> List Svg -> Svg
 node name =
   \attributes children ->
     VirtualDom.node name (svgNamespace :: attributes) children
 
 
-{-|-}
+{-| A simple text node, no tags at all.
+
+Warning: not to be confused with `text'` which produces the SVG `<text>` tag!
+-}
+text : String -> Svg
+text =
+  VirtualDom.text
+
+
+{-| The root `<svg>` node for any SVG scene. This example shows a scene
+containing a rounded rectangle:
+
+    import Html
+    import Svg exposing (..)
+    import Svg.Attributes exposing (..)
+
+    roundRect : Html.Html
+    roundRect =
+        svg
+          [ width "120", height "120", viewBox "0 0 120 120" ]
+          [ rect [ x "10", y "10", width "100", height "100", rx "15", ry "15" ] [] ]
+-}
 svg : List Html.Attribute -> List Svg -> Html.Html
 svg =
   node "svg"
@@ -548,8 +580,8 @@ textPath =
 
 
 {-|-}
-text : List Attribute -> List Svg -> Svg
-text =
+text' : List Attribute -> List Svg -> Svg
+text' =
   node "text"
 
 
