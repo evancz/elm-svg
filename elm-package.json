@@ -1,5 +1,5 @@
 {
-    "version": "2.0.0",
+    "version": "2.0.1",
     "summary": "Fast SVG, rendered with virtual DOM diffing",
     "repository": "https://github.com/evancz/elm-svg.git",
     "license": "BSD3",
