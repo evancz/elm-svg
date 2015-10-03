@@ -48,7 +48,7 @@ module Svg.Attributes where
 -}
 
 import Svg exposing (Attribute)
-import VirtualDom exposing (attribute)
+import VirtualDom exposing (attribute, attributeNS)
 
 
 -- Regular attributes
@@ -1124,61 +1124,61 @@ xChannelSelector =
 {-|-}
 xlinkActuate : String -> Attribute
 xlinkActuate =
-  attribute "xlink:actuate"
+  attributeNS "http://www.w3.org/1999/xlink" "xlink:actuate"
 
 
 {-|-}
 xlinkArcrole : String -> Attribute
 xlinkArcrole =
-  attribute "xlink:arcrole"
+  attributeNS "http://www.w3.org/1999/xlink" "xlink:arcrole"
 
 
 {-|-}
 xlinkHref : String -> Attribute
 xlinkHref =
-  attribute "xlink:href"
+  attributeNS "http://www.w3.org/1999/xlink" "xlink:href"
 
 
 {-|-}
 xlinkRole : String -> Attribute
 xlinkRole =
-  attribute "xlink:role"
+  attributeNS "http://www.w3.org/1999/xlink" "xlink:role"
 
 
 {-|-}
 xlinkShow : String -> Attribute
 xlinkShow =
-  attribute "xlink:show"
+  attributeNS "http://www.w3.org/1999/xlink" "xlink:show"
 
 
 {-|-}
 xlinkTitle : String -> Attribute
 xlinkTitle =
-  attribute "xlink:title"
+  attributeNS "http://www.w3.org/1999/xlink" "xlink:title"
 
 
 {-|-}
 xlinkType : String -> Attribute
 xlinkType =
-  attribute "xlink:type"
+  attributeNS "http://www.w3.org/1999/xlink" "xlink:type"
 
 
 {-|-}
 xmlBase : String -> Attribute
 xmlBase =
-  attribute "xml:base"
+  attributeNS "http://www.w3.org/XML/1998/namespace" "xml:base"
 
 
 {-|-}
 xmlLang : String -> Attribute
 xmlLang =
-  attribute "xml:lang"
+  attributeNS "http://www.w3.org/XML/1998/namespace" "xml:lang"
 
 
 {-|-}
 xmlSpace : String -> Attribute
 xmlSpace =
-  attribute "xml:space"
+  attributeNS "http://www.w3.org/XML/1998/namespace" "xml:space"
 
 
 {-|-}
