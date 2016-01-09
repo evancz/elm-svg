@@ -1,6 +1,6 @@
-import Svg (..)
-import Svg.Attributes (..)
-import Html (Html)
+import Svg exposing (..)
+import Svg.Attributes exposing (..)
+import Html exposing (Html)
 
 
 main : Html
