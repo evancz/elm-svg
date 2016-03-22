@@ -14,8 +14,8 @@ module Svg.Events
 @docs onAbort, onError, onResize, onScroll, onLoad, onUnload, onZoom
 
 # Graphical event attributes
-@docs onActivate, onClick, onFocusIn, onFocusOut, onMouseDown, onMouseMove,
-  onMouseOut, onMouseOver, onMouseUp
+@docs onActivate, onClick, onFocusIn, onFocusOut, onMouseDown, onMouseEnter,
+  onMouseLeave, onMouseMove, onMouseOut, onMouseOver, onMouseUp
 
 -}
 
