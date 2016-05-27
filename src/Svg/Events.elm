@@ -2,7 +2,7 @@ module Svg.Events
     ( onBegin, onEnd, onRepeat
     , onAbort, onError, onResize, onScroll, onLoad, onUnload, onZoom
     , onActivate, onClick, onFocusIn, onFocusOut, onMouseDown, onMouseMove
-    , onMouseOut, onMouseOver, onMouseUp
+    , onMouseOut, onMouseOver, onMouseUp, onEvent
     ) where
 
 {-|
@@ -16,6 +16,9 @@ module Svg.Events
 # Graphical event attributes
 @docs onActivate, onClick, onFocusIn, onFocusOut, onMouseDown, onMouseMove,
   onMouseOut, onMouseOver, onMouseUp
+ 
+# Other event attributes
+@docs onEvent
 
 -}
 
@@ -158,3 +161,12 @@ onMouseOver =
 onMouseUp : Signal.Message -> Attribute
 onMouseUp =
   messageOn "mouseup"
+
+
+-- Other event attributes
+
+
+{-|-}
+onEvent : String -> Signal.Message -> Attribute
+onEvent event =
+  messageOn event
